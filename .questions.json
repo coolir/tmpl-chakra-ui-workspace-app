@@ -1,0 +1,68 @@
+[
+    {
+      "name": "__USERFULLNAME__",
+      "message": "Enter author full name",
+      "required": true
+    },
+    {
+      "name": "__DOTCOM__",
+      "message": "Enter the domain name",
+      "required": true
+    },
+    {
+      "name": "__LEGALDATE__",
+      "message": "Enter the legal effective date, e.g. June 1, 2020",
+      "required": true
+    },
+    {
+      "name": "__CORPNICK__",
+      "message": "Enter the company nick name",
+      "required": true
+    },
+    {
+      "name": "__CORPNAME__",
+      "message": "Enter the full company official name",
+      "required": true
+    },
+    {
+      "name": "__CORPADDR1__",
+      "message": "Enter the company street address, e.g. 5555 Your Dr.",
+      "required": true
+    },
+    {
+      "name": "__CORPADDR2__",
+      "message": "Enter the company city state, e.g. Your City, CA 90000",
+      "required": true
+    },
+    {
+      "name": "__CORPCITY__",
+      "message": "Enter the company city e.g. Your City",
+      "required": true
+    },
+    {
+      "name": "__CORPSTATE__",
+      "message": "Enter the company state, e.g. California",
+      "required": true
+    },
+    {
+      "name": "__USEREMAIL__",
+      "message": "Enter author email",
+      "required": true
+    },
+    {
+      "name": "__MODULENAME__",
+      "message": "Enter the module name",
+      "required": true
+    },
+    {
+      "name": "__MODULEDESC__",
+      "message": "Enter the module description",
+      "required": true
+    },
+    {
+      "name": "__USERNAME__",
+      "message": "Enter your github username",
+      "required": true
+    }
+  ]
+  
