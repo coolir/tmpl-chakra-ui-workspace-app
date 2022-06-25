@@ -1,0 +1,65 @@
+{
+  "name": "__PACKAGE_IDENTIFIER__",
+  "version": "0.0.1",
+  "description": "__MODULEDESC__",
+  "author": "__USERFULLNAME__ <__USEREMAIL__>",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/__USERNAME__/__MODULENAME__"
+  },
+  "bugs": {
+    "url": "https://github.com/__USERNAME__/__MODULENAME__/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "postexport": "npm run seo",
+    "seo": "node ./seo/seo.js",
+    "deploy": "AWS_PROFILE=webinc aws s3 sync out/ s3://__DOTCOM__",
+    "invalidate": "AWS_PROFILE=webinc aws cloudfront create-invalidation --distribution-id AWSDISTRIBUTIONIDHERE --paths \"/*\"",
+    "deploy:all": "npm run export && npm run deploy && ./seo/prepare.sh"
+  },
+  "resolutions": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.7",
+    "@chakra-ui/react": "^1.8.6",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11",
+    "framer-motion": "4.1.17",
+    "mobx": "^6.1.7",
+    "mobx-react-lite": "^3.2.0",
+    "mobx-utils": "^6.0.3",
+    "next": "12.1.0",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.17.6",
+    "@babel/core": "7.17.5",
+    "@babel/eslint-parser": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "7.16.7",
+    "@babel/plugin-proposal-export-default-from": "7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "7.17.3",
+    "@babel/plugin-transform-runtime": "7.17.0",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-react": "7.16.7",
+    "@next/eslint-plugin-next": "12.1.0",
+    "@types/react": "^17.0.38",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-inline-json-import": "0.3.2",
+    "babel-plugin-macros": "2.8.0",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "typescript": "^4.5.5"
+  }
+}
